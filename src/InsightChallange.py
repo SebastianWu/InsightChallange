@@ -71,7 +71,7 @@ while(sliding_window_initial_time_stamp < sliding_window_length+1):
 					error += abs(actual_stock_value.price-predicted_stock_value.price)
 					num+=1
 					break
-	print(str(sliding_window_initial_time_stamp)+"|"+str(sliding_window_initial_time_stamp+window_size-1)+"|"+"{0:.2f}".format(error/num))
+	##print(str(sliding_window_initial_time_stamp)+"|"+str(sliding_window_initial_time_stamp+window_size-1)+"|"+"{0:.2f}".format(error/num))
 	f.write(str(sliding_window_initial_time_stamp)+"|"+str(sliding_window_initial_time_stamp+window_size-1)+"|"+"{0:.2f}".format(error/num)+"\n")
 	##+str(round(error/num,2))
 	##print("{0:.2f}".format(error/num))
