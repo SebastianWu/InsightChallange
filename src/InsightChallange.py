@@ -1,6 +1,6 @@
-actual_value_filename = "/Users/sebastianwu/Desktop/InsightChallange/input/actual.txt"
-predicted_value_filename = "/Users/sebastianwu/Desktop/InsightChallange/input/predicted.txt"
-window_size_filename = "/Users/sebastianwu/Desktop/InsightChallange/input/window.txt"
+actual_value_filename = "input/actual.txt"
+predicted_value_filename = "input/predicted.txt"
+window_size_filename = "input/window.txt"
 
 class stock_value:
 	def __init__(self, time, stock, price):
