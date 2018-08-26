@@ -57,7 +57,7 @@ predicted_stock_value_list.append(predicted_stock_value_unit_list)
 ## read window size
 window_size = int(open(window_size_filename,"r").readline().rstrip("\n"))
 
-f = open("insight_testsuite/temp/output/comparison.txt","w")
+f = open("output/comparison.txt","w")
 sliding_window_initial_time_stamp = 1
 sliding_window_length = actual_stock_value_list[-1][-1].time-window_size+1
 while(sliding_window_initial_time_stamp < sliding_window_length+1):
