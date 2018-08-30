@@ -3,6 +3,7 @@ import sys
 actual_value_filename = sys.argv[1] ## "/Users/sebastianwu/Desktop/InsightChallange/input/actual.txt"
 predicted_value_filename = sys.argv[2] ## "/Users/sebastianwu/Desktop/InsightChallange/input/predicted.txt"
 window_size_filename = sys.argv[3] ## "/Users/sebastianwu/Desktop/InsightChallange/input/window.txt"
+comparision_filename = sys.argv[4]
 
 class stock_value:
 	def __init__(self, time, stock, price):
@@ -29,6 +30,7 @@ for line in actual_value_file:
 actual_stock_value_dict[previous_time_stamp] = actual_stock_value_unit_list
 
 
+
 ## read predicted stock value
 predicted_value_file = open(predicted_value_filename,"r")
 predicted_stock_value_dict = {}
@@ -49,7 +51,7 @@ predicted_stock_value_dict[previous_time_stamp] = predicted_stock_value_unit_lis
 ## read window size
 window_size = int(open(window_size_filename,"r").readline().rstrip("\n"))
 
-f = open("/Users/sebastianwu/Desktop/prediction-validation-master/insight_testsuite/temp/output/comparison.txt","w")
+f = open(comparision_filename,"w")
 sliding_window_initial_time_stamp = 1
 sliding_window_length = int(max(actual_stock_value_dict, key = int))-window_size+1
 while(sliding_window_initial_time_stamp < sliding_window_length+1):
